@@ -1,8 +1,9 @@
 Pod::Spec.new do |spec|
   spec.name      = "BraintreeEncryption"
   spec.version   = "1.0.1"
-  spec.summary   = "Library for client-side encryption of sensitive data to be read by Braintree Payments"
+  spec.summary   = "Library for client-side encryption of sensitive data to be read by Braintree Payments."
   spec.homepage  = "http://www.braintreepayments.com"
+  spec.license   = { :type => 'Braintree', :file => 'LICENSE' }
 
   spec.author    = { "Braintree" => "code@getbraintree.com" }
 
@@ -12,5 +13,7 @@ Pod::Spec.new do |spec|
   }
 
   spec.source_files = 'src/*.{h,m}'
-  spec.clean_paths  = ['test']
+  spec.preserve_paths  = ['test']
+  spec.requires_arc = true
+  spec.frameworks = 'Security'
 end

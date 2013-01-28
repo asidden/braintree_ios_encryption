@@ -1,4 +1,5 @@
 #import "BraintreeRandom.h"
+#include <Security/SecRandom.h>
 
 @implementation BraintreeRandom
 
