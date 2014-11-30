@@ -46,7 +46,7 @@
                                   cipherTextBuf, &cipherTextSize);
 
   if(result != noErr)
-    NSLog(@"Secure Key Encryption Failed With Error: %ld", result);
+    NSLog(@"Secure Key Encryption Failed With Error: %ld", (long)result);
 
   return [[NSData alloc] initWithBytes: cipherTextBuf length:cipherTextSize];
 }
